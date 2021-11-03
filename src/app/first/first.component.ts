@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FirstComponent implements OnInit {
   @Input() company: string;
+  ceoName: string = 'Steve';
 
   constructor() {}
 
@@ -14,5 +15,9 @@ export class FirstComponent implements OnInit {
 
   onButtonClick(evt: any) {
     this.company = 'Click binding works';
+  }
+
+  onKeyUp(evt: any) {
+    this.ceoName = evt.target.value;
   }
 }

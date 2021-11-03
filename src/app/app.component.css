@@ -1,2 +1,5 @@
-.container {
+html,
+head,
+body {
+  font-family: Arial;
 }

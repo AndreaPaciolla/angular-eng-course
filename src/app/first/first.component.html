@@ -6,4 +6,9 @@
       Change
     </button>
   </div>
+
+  <div>
+    <input type="text" name="ceo_name" (keyup)="onKeyUp($event)" />
+    <app-ceo [ceo]="ceoName"></app-ceo>
+  </div>
 </div>
