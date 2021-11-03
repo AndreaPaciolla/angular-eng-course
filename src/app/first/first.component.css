@@ -1,0 +1,18 @@
+.Container {
+  padding: 0px;
+}
+
+.Container__Title {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+.Container__Button {
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  font-size: 17px;
+}
