@@ -20,4 +20,10 @@ export class PostService {
       this.httpClient.get('https://jsonplaceholder.typicode.com/posts')
     );
   }
+
+  get(id: any): Observable<Post> {
+    return <Observable<Post>>(
+      this.httpClient.get('https://jsonplaceholder.typicode.com/posts/' + id)
+    );
+  }
 }
