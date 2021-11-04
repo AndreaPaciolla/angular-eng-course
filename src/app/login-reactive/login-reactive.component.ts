@@ -19,8 +19,8 @@ export class LoginReactiveComponent implements OnInit {
       password: new FormControl(''),
     });
     this._authService.loginStatus().subscribe((r) => {
-      console.log(`Receiving ${r}`)
-      this.isLogged = r
+      console.log(`Receiving ${r}`);
+      this.isLogged = r;
     });
   }
 

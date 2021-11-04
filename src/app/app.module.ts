@@ -12,6 +12,7 @@ import { ReactiveRegisterComponent } from './reactive-register/reactive-register
 import { HttpClientModule } from '@angular/common/http';
 import { PostListComponent } from './post-list/post-list.component';
 import { LoginReactiveComponent } from './login-reactive/login-reactive.component';
+import { PostPipe } from '../post.pipe';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
@@ -25,6 +26,7 @@ import { LoginReactiveComponent } from './login-reactive/login-reactive.componen
     ReactiveRegisterComponent,
     PostListComponent,
     LoginReactiveComponent,
+    PostPipe,
   ],
   bootstrap: [AppComponent],
 })
