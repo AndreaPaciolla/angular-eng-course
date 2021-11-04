@@ -9,9 +9,11 @@ import { CeoComponent } from './ceo/ceo.component';
 import { DirComponent } from './dir/dir.component';
 import { TemplateRegisterComponent } from './template-register/template-register.component';
 import { ReactiveRegisterComponent } from './reactive-register/reactive-register.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PostListComponent } from './post-list/post-list.component';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   declarations: [
     AppComponent,
     HelloComponent,
@@ -20,6 +22,7 @@ import { ReactiveRegisterComponent } from './reactive-register/reactive-register
     DirComponent,
     TemplateRegisterComponent,
     ReactiveRegisterComponent,
+    PostListComponent,
   ],
   bootstrap: [AppComponent],
 })
