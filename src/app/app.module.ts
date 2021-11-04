@@ -11,6 +11,7 @@ import { TemplateRegisterComponent } from './template-register/template-register
 import { ReactiveRegisterComponent } from './reactive-register/reactive-register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostListComponent } from './post-list/post-list.component';
+import { LoginReactiveComponent } from './login-reactive/login-reactive.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
@@ -23,6 +24,7 @@ import { PostListComponent } from './post-list/post-list.component';
     TemplateRegisterComponent,
     ReactiveRegisterComponent,
     PostListComponent,
+    LoginReactiveComponent,
   ],
   bootstrap: [AppComponent],
 })
