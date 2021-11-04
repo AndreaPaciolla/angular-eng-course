@@ -17,7 +17,6 @@ export class PostListComponent implements OnInit {
       .getAll()
       .pipe(first())
       .subscribe((r) => {
-        console.log(r);
         this.posts = r;
       });
   }
