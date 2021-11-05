@@ -26,4 +26,16 @@ export class PostService {
       this.httpClient.get('https://jsonplaceholder.typicode.com/posts/' + id)
     );
   }
+
+  create(post: Post): Observable<Post> {
+    return <Observable<Post>>(
+      this.httpClient.post('https://jsonplaceholder.typicode.com/posts/', post)
+    );
+  }
+
+  edit(post: Post): Observable<Post> {
+    return <Observable<Post>>(
+      this.httpClient.put('https://jsonplaceholder.typicode.com/posts/', post)
+    );
+  }
 }

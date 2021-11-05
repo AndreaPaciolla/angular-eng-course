@@ -16,6 +16,7 @@ import { PostPipe } from '../post.pipe';
 import { RouterModule, Routes } from '@angular/router';
 import { NavComponent } from './nav/nav.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
+import { PostCreateComponent } from './post-create/post-create.component';
 
 const routes: Routes = [
   {
@@ -27,8 +28,16 @@ const routes: Routes = [
     component: PostListComponent,
   },
   {
+    path: 'posts/create',
+    component: PostCreateComponent,
+  },
+  {
     path: 'posts/:id',
     component: PostDetailsComponent,
+  },
+  {
+    path: 'posts/:id/edit',
+    component: PostCreateComponent,
   },
 ];
 
@@ -52,6 +61,7 @@ const routes: Routes = [
     LoginReactiveComponent,
     PostPipe,
     NavComponent,
+    PostCreateComponent,
   ],
   bootstrap: [AppComponent],
 })
