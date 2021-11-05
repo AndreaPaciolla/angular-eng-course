@@ -57,11 +57,12 @@ const routes: Routes = [
     DirComponent,
     TemplateRegisterComponent,
     ReactiveRegisterComponent,
-    PostListComponent,
     LoginReactiveComponent,
     PostPipe,
     NavComponent,
+    PostListComponent,
     PostCreateComponent,
+    PostDetailsComponent,
   ],
   bootstrap: [AppComponent],
 })
