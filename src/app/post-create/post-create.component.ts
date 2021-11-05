@@ -33,14 +33,16 @@ export class PostCreateComponent implements OnInit {
 
   initPostForm(post?: Post): void {
     this.postForm = new FormGroup({
-      title: new FormControl(post.title || '', [
+      title: new FormControl(post?.title || '', [
         Validators.required,
         Validators.minLength(5),
       ]),
-      body: new FormControl(post.body || '', [
+      body: new FormControl(post?.body || '', [
         Validators.required,
         Validators.minLength(5),
       ]),
+      id: new FormControl(post?.id || ''),
+      userId: new FormControl(post?.userId || ''),
     });
     this.loaded = true;
   }
@@ -52,6 +54,10 @@ export class PostCreateComponent implements OnInit {
       id: this.postForm.value.id,
       userId: this.postForm.value.userId,
     };
-    this.postService.create(payload).subscribe((r) => console.log(r));
+    if (this.route.snapshot.paramMap.has('id')) {
+      this.postService.edit(payload).subscribe((r) => console.log(r));
+    } else {
+      this.postService.create(payload).subscribe((r) => console.log(r));
+    }
   }
 }
