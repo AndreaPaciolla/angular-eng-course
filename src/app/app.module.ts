@@ -17,15 +17,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { NavComponent } from './nav/nav.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
 import { PostCreateComponent } from './post-create/post-create.component';
+import { AuthGuard } from '../auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: HelloComponent,
+    component: LoginReactiveComponent,
   },
   {
     path: 'posts',
     component: PostListComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'posts/create',
